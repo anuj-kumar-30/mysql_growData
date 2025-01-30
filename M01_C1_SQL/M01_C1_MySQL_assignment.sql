@@ -114,3 +114,30 @@ or lcase(city) LIKE '%i'
 or lcase(city) LIKE '%o'
 or lcase(city) LIKE '%u'
 ORDER BY city;
+
+-- Q13
+select * from station;
+SELECT DISTINCT(city) as UNIQUE_city from station
+where lcase(city) NOT LIKE 'a%'
+and lcase(city) NOT LIKE 'e%'
+and lcase(city) NOT LIKE 'i%'
+and lcase(city) NOT LIKE 'o%'
+and lcase(city) NOT LIKE 'u%';
+
+-- Q14
+SELECT DISTINCT(city) as unique_city from station
+where LCASE(city) not like '%a'
+and LCASE(city) not like '%e'
+and lcase(city) not LIKE '%i'
+and LCASE(city) not like '%o'
+and LCASE(city) not like '%u';
+
+-- Q15
+SELECT DISTINCT(city) as unique_city from station
+where lcase(city) not like 'a%a'
+and lcase(city) not like 'e%e'
+and lcase(city) not like 'i%i'
+and lcase(city) not like 'o%o'
+and lcase(city) not like 'u%u';
+
+-- Q16
